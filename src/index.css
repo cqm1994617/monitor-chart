@@ -1,0 +1,14 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    background-color: #0e122d;
+    color: #1a91ce;
+}
+
+@font-face {
+    font-family: 'electronStyle';
+    src: url("./assets/font/DS-DIGIT.TTF");
+}
