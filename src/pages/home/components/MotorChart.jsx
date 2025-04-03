@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react'
 import Chart from '@/components/Chart'
-import * as echarts from 'echarts'
 import styled from 'styled-components'
 import { randomInRange } from '@/utils/index'
 import dayjs from 'dayjs';
@@ -8,11 +7,11 @@ import dayjs from 'dayjs';
 const Container = styled.div`
     border: 1px solid #3486da;
     box-sizing: border-box;
-    padding: 20px;
+    padding: 1vw 20px;
     background-color: #031d52;
-    margin-bottom: 20px;
+    margin-bottom: 1vw;
     h1 {
-        font-size: 24px;
+        font-size: 1.1vw;
     }
 `
 
@@ -22,7 +21,7 @@ const getCommonOption = (name, time) => {
             text: name,
             left: 'center',
             textStyle: {
-                color: '#ccc'
+                color: '#ccc',
             },
         },
         backgroundColor: '#031d52',
@@ -30,8 +29,8 @@ const getCommonOption = (name, time) => {
         grid: {
             top: '60px',
             bottom: '60px',
-            left: '80px',
-            right: '100px'
+            left: '60px',
+            right: '60px'
         },
         tooltip: { trigger: 'axis' },
         xAxis: {
@@ -156,8 +155,8 @@ const getOption2 = (options) => {
 }
 
 const chartStyle = {
-    height: '315px',
-    marginTop: '30px'
+    height: '14vw',
+    marginTop: '1.5vw'
 }
 
 const getRandomEA = () => {
@@ -217,7 +216,7 @@ const initialSpeed = Array.from({ length: 60 }, (_, i) => ({
     time: dayjs().subtract((59 - i) * timeSplit, 'second').format('HH:mm:ss')
 }))
 
-export default () => {
+const MotorChart = () => {
     const [EA, setEA] = useState(initialEA);
     const [frequency, setFrequency] = useState(initialFrequency);
     const [temperature, setTemperature] = useState(initialTemperature);
@@ -276,3 +275,5 @@ export default () => {
         </Container>
     )
 }
+
+export default MotorChart

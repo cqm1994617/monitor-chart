@@ -4,7 +4,7 @@ import * as echarts from 'echarts';
 const EChartsWrapper = ({ 
   option,
   width = '100%',
-  height = '300px',
+  height = '13vw',
   theme,
   onEvents,
   style = {},
@@ -26,7 +26,7 @@ const EChartsWrapper = ({
     return () => {
       chartInstance.current?.dispose();
     };
-  }, [theme]);
+  }, [theme, onEvents]);
 
   useEffect(() => {
     if (chartInstance.current) {
