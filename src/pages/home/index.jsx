@@ -13,7 +13,7 @@ import video1 from '@/assets/video/1.mp4'
 import video2 from '@/assets/video/2.mp4'
 
 const Body = styled.div`
-    margin: 40px 0px;
+    margin: 1.6vw 0;
     display: flex;
     flex-wrap: wrap;
 `
@@ -21,7 +21,7 @@ const Body = styled.div`
 const Column = styled.div`
     width: ${props => props.width};
     box-sizing: border-box;
-    padding: 10px;
+    padding: 0.5vw;
 `
 
 export const Home = () => {

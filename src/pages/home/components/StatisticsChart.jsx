@@ -1,25 +1,21 @@
 import React, { useMemo, useState, useEffect } from 'react'
 import styled from 'styled-components'
-import Chart from '@/components/Chart'
 
 const Container = styled.div`
-    margin-bottom: 3.6vw;
+    margin-bottom: 5.1vw;
 `
 
 const ContainerItem = styled.div`
     display: flex;
     justify-content: space-between;
-    margin-bottom: 30px;
+    margin-bottom: 2vw;
 `
 
 const StatisticsItem = styled.div`
     display: flex;
     h2 {
-        font-size: 28px;
-        @media (max-width: 2100px) {
-            font-size: 24px;
-        }
-        margin: 0 5px;
+        font-size: 1.5vw;
+        margin: 0 0.4vw;
         color:rgb(147, 185, 222);
     }
 `
@@ -32,13 +28,10 @@ const NumberContainer = styled.div`
         display: flex;
         align-items: center;
         justify-content: center;
-        margin: 0 2px;
-        font-size: 24px;
+        margin: 0 0.1vw;
+        font-size: 1.3vw;
         font-weight: bold;
-        padding: 2px 4px;
-        @media (max-width: 2100px) {
-            font-size: 24px;
-        }
+        padding: 0.1vw 0.3vw;
     }
 `
 

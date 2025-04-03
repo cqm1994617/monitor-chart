@@ -7,7 +7,7 @@ import dayjs from 'dayjs';
 const Container = styled.div`
     border: 1px solid #3486da;
     box-sizing: border-box;
-    padding: 1vw 20px;
+    padding: 1vw;
     background-color: #031d52;
     margin-bottom: 1vw;
     h1 {
@@ -22,6 +22,7 @@ const getCommonOption = (name, time) => {
             left: 'center',
             textStyle: {
                 color: '#ccc',
+                fontSize: '0.9rem',
             },
         },
         backgroundColor: '#031d52',
@@ -29,8 +30,8 @@ const getCommonOption = (name, time) => {
         grid: {
             top: '60px',
             bottom: '60px',
-            left: '60px',
-            right: '60px'
+            left: '40px',
+            right: '40px'
         },
         tooltip: { trigger: 'axis' },
         xAxis: {
@@ -38,6 +39,7 @@ const getCommonOption = (name, time) => {
             data: time,
             axisLabel: {
                 interval: 15,
+                fontSize: '0.65rem',
                 color: '#fff',
                 formatter: (value, index) => {
                     // 只显示中间5个标签
@@ -66,12 +68,24 @@ const getOption = (options) => {
                 type: 'value',
                 name: '频率(Hz)',
                 position: 'right',
+                axisLabel: {
+                    fontSize: '0.6rem',
+                },
+                nameTextStyle: {
+                    fontSize: '0.6rem'
+                },
                 axisLine: { lineStyle: { color: frequencyColor } },
             },
             { // 左侧第二个轴（如电流）
                 type: 'value',
                 name: '电流(A)',
                 position: 'left',
+                axisLabel: {
+                    fontSize: '0.7rem',
+                },
+                nameTextStyle: {
+                    fontSize: '0.7rem'
+                },
                 axisLine: { lineStyle: { color: EAColor } },
                 splitLine: { show: false }
             }
@@ -117,11 +131,23 @@ const getOption2 = (options) => {
                 splitLine: { show: false },
                 min: 0,
                 max: 150,
+                axisLabel: {
+                    fontSize: '0.6rem',
+                },
+                nameTextStyle: {
+                    fontSize: '0.6rem'
+                },
             },
             { // 右侧第二个轴（如速度）
                 type: 'value',
                 name: '速度\n (m/s)',
                 position: 'right',
+                axisLabel: {
+                    fontSize: '0.6rem',
+                },
+                nameTextStyle: {
+                    fontSize: '0.6rem'
+                },
                 axisLine: { lineStyle: { color: speedColor } },
             }
         ],
@@ -155,7 +181,7 @@ const getOption2 = (options) => {
 }
 
 const chartStyle = {
-    height: '14vw',
+    height: '15vw',
     marginTop: '1.5vw'
 }
 

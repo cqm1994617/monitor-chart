@@ -4,18 +4,18 @@ import styled, { keyframes } from 'styled-components'
 const Container = styled.div`
     border: 1px solid #3486da;
     box-sizing: border-box;
-    padding: 20px;
+    padding: 1.02vw;
     background-color: #031d52;
-    margin-bottom: 20px;
+    margin-bottom: 1vw;
     h1 {
-        font-size: 24px;
+        font-size: 1.1vw;
     }
 `
 
 const StatuList = styled.div`
     display: flex;
     justify-content: space-between;
-    margin: 30px 20px 20px;
+    margin: 1.7vw 1vw 1vw;
 `
 
 const breathHealthy = keyframes`
@@ -32,12 +32,15 @@ const breathUnhealthy = keyframes`
 
 const StatuItem = styled.div`
     h2 {
-        font-size: 16px;
-        margin-bottom: 4px;
+        font-size: 0.9vw;
+        margin-bottom: 0.4vw;
+    }
+    p {
+        font-size: 0.9vw;
     }
     color: #1A233D;
-    padding: 8px 18px;
-    border-radius: 10px;
+    padding: 0.5vw 0.9vw;
+    border-radius: 0.5vw;
     text-align: center;
     background-color: ${props => props.status === 1 ? '#4AD87A' : '#FF4444'};
     animation: 

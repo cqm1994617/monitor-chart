@@ -8,9 +8,9 @@ const Container = styled.div`
 
 const CompanyName = styled.div`
     position: absolute;
-    bottom: 15px;
+    bottom: 0.8vw;
     left: 1vw;
-    font-size: 26px;
+    font-size: 1.3vw;
     background: linear-gradient(to right, #187bcf, #36d9ff);
     -webkit-background-clip: text;
     background-clip: text;
@@ -19,8 +19,8 @@ const CompanyName = styled.div`
 
 const Title = styled.div`
     box-sizing: border-box;
-    padding: 20px 15px 10px;
-    font-size: 60px;
+    padding: 1.1vw 0.8vw 0.5vw;
+    font-size: 3vw;
     color: rgba(255, 255, 255, 0.85);
     color: #399bff;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -30,9 +30,9 @@ const Title = styled.div`
 
 const Time = styled.div`
     position: absolute;
-    bottom: 15px;
+    bottom: 0.8vw;
     right: 1vw;
-    font-size: 36px;
+    font-size: 1.8vw;
     color: rgba(255, 255, 255, 0.7);
     font-family: electronStyle;
 `

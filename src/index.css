@@ -6,6 +6,12 @@
 html, body {
     background-color: #0e122d;
     color: #1a91ce;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+body::-webkit-scrollbar {
+    display: none; /* Chrome Safari */
 }
 
 @font-face {

@@ -5,12 +5,12 @@ import { randomInRange } from '@/utils/index'
 const Container = styled.div`
     border: 1px solid #3486da;
     box-sizing: border-box;
-    padding: 20px;
+    padding: 1.02vw;
     background-color: #031d52;
-    margin-bottom: 20px;
+    margin-bottom: 1vw;
     h1 {
-        font-size: 24px;
-        margin-bottom: 10px;
+        font-size: 1.1vw;
+        margin-bottom: 1.2vw;
     }
 `
 
@@ -20,15 +20,11 @@ const StatuList = styled.div`
 `
 
 const StatuItem = styled.div`
-    h2 {
-        font-size: 16px;
-        margin-bottom: 4px;
-    }
     color: #1A233D;
-    padding: 10px 0;
+    padding: 0.64vw 0;
     border-radius: 10px;
     color: rgb(147, 185, 222);
-    font-size: 20px;
+    font-size: 1vw;
 `
 
 const getWeight = () => {

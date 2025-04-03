@@ -5,8 +5,8 @@ const Container = styled.div `
     video {
         display: block;
         width: 100%;
-        margin-bottom: 20px;
-        height: 373px;
+        margin-bottom: 1vw;
+        height: 18vw;
         object-fit: cover;
     }
 `

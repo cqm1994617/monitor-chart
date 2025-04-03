@@ -1,17 +1,16 @@
 import React, { useState, useEffect } from 'react'
 import Chart from '@/components/Chart'
-import * as echarts from 'echarts'
-import styled, { keyframes } from 'styled-components'
+import styled from 'styled-components'
 import { randomInRange } from '@/utils/index'
 
 const Container = styled.div`
     border: 1px solid #3486da;
     box-sizing: border-box;
-    padding: 20px;
+    padding: 1vw;
     background-color: #031d52;
-    margin-bottom: 20px;
+    margin-bottom: 1vw;
     h1 {
-        font-size: 24px;
+        font-size: 1.1vw;
     }
 `
 
@@ -27,17 +26,18 @@ const getOption = ({ title, data }) => {
             left: 'center',
             textStyle: {
                 color: '#1bb4f9',
-                fontSize: 16,
+                fontSize: '0.8rem',
             }
         },
         series: [
             {
                 min: data.min,
                 max: data.max,
+                splitNumber: 10,
                 type: 'gauge',
                 axisLine: {
                     lineStyle: {
-                        width: 10,
+                        width: 7,
                         color: [
                             [data.range[0] / data.max, '#FAC858'],
                             [data.range[1] / data.max, '#91cc75'],
@@ -50,19 +50,30 @@ const getOption = ({ title, data }) => {
                         color: 'auto'
                     }
                 },
+                splitLine: {
+                    distance: 0,
+                    lineStyle: {
+                        color: 'auto',
+                        width: 1
+                    }
+                },
+                axisTick: {
+                    distance: 0,
+                    lineStyle: {
+                        color: 'auto',
+                        width: 1
+                    }
+                },
                 axisLabel: {
                     color: 'inherit',
-                    distance: -56,
+                    distance: -42,
                     fontSize: 12,
-                    formatter: (value) => {
-                        return value
-                    } 
                 },
                 detail: {
                     valueAnimation: true,
                     formatter: '{value} Pa',
                     color: 'inherit',
-                    fontSize: 20,
+                    fontSize: '1rem',
                 },
                 data: [
                     {
@@ -145,8 +156,8 @@ export default () => {
         <Container>
             <h1>气箱压力</h1>
             <ChartList>
-                <Chart option={option} height='300px' />
-                <Chart option={option2} height='300px' />
+                <Chart option={option} height='14vw' />
+                <Chart option={option2} height='14vw' />
             </ChartList>
         </Container>
     )

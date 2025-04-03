@@ -6,11 +6,11 @@ import { randomInRange } from '@/utils/index'
 const Container = styled.div`
     border: 1px solid #3486da;
     box-sizing: border-box;
-    padding: 20px;
+    padding: 1vw;
     background-color: #031d52;
-    margin-bottom: 20px;
+    margin-bottom: 1vw;
     h1 {
-        font-size: 24px;
+        font-size: 1.1vw;
     }
 `
 
@@ -23,14 +23,14 @@ const StatusPanel = styled.div`
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    margin: 20px 0 30px 0;
+    margin: 1vw 0 1.5vw 0;
 `
 
 const StatuItem = styled.div`
     display: flex;
     flex: 1;
     align-items: center;
-    font-size: 18px;
+    font-size: 0.95vw;
 `
 
 const getOption = (data) => {
@@ -53,9 +53,11 @@ const getOption = (data) => {
                 lineStyle: { color: '#999' } // 淡化网格线
             },
             axisLabel: {
+                fontSize: '0.6rem',
                 color: '#eee'
             },
             nameTextStyle: {
+                fontSize: '0.6rem',
                 color: '#eee'
             }
         },
@@ -88,7 +90,7 @@ const getOption = (data) => {
         }],
         grid: {  // 图表边距
             top: 50,
-            bottom: 30,
+            bottom: 10,
             containLabel: true
         }
     };
@@ -145,9 +147,9 @@ export default () => {
 
     return (
         <Container>
-            <h1>风机状态</h1>
+            <h1>风机电流状态</h1>
             <Wrapper>
-                <Chart option={option} />
+                <Chart option={option} height='14.6vw' />
                 <StatusPanel>
                     {
                         statuList.map((item, index) => (
